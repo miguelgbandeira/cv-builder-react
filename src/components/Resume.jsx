@@ -1,3 +1,9 @@
+import HeaderSection from "./HeaderSection";
+
 export default function Resume() {
-  return <div>CV</div>;
+  return (
+    <div>
+      <HeaderSection />
+    </div>
+  );
 }

@@ -1,0 +1,15 @@
+.cv-header-container {
+  background-color: blue;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.subsection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 0.5em;
+}
+
+.header-name {
+  padding: 0.5em 0;
+}
