@@ -1,4 +1,4 @@
-import HeaderSection from "./HeaderSection";
+import HeaderSection from "./CVHeaderSection";
 
 export default function Resume() {
   return (

@@ -6,6 +6,8 @@ import Resume from "./components/Resume.jsx";
 import WorkExperienceForm from "./components/WorkExperienceForm.jsx";
 
 function App() {
+  const [personalInfo, setPersonalInfo] = useState("Full Name");
+
   return (
     <div className="app">
       <Header />
