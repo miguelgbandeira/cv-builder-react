@@ -1,9 +1,9 @@
-import HeaderSection from "./CVHeaderSection";
+import CVHeaderSection from "./CVHeaderSection";
 
-export default function Resume() {
+export default function Resume({ personalInfo }) {
   return (
     <div>
-      <HeaderSection />
+      <CVHeaderSection personalInfo={personalInfo} />
     </div>
   );
 }
