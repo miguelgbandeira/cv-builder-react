@@ -1,4 +1,3 @@
-import Field from "./Field.jsx";
 import Button from "./Button.jsx";
 
 export default function PersonalInformationForm({
@@ -8,36 +7,44 @@ export default function PersonalInformationForm({
   return (
     <>
       <h2>Personal Information</h2>
-      <Field
-        label="Full Name"
-        value={personalInfo.name}
-        onChange={(e) => handleFieldChange("name", e.target.value)}
-      />
-      <Field
-        label="Email"
-        value={personalInfo.email}
-        onChange={(e) => handleFieldChange("email", e.target.value)}
-      />
-      <Field
-        label="Phone Number"
-        value={personalInfo.phoneNumber}
-        onChange={(e) => handleFieldChange("phoneNumber", e.target.value)}
-      />
-      <Field
-        label="Location"
-        value={personalInfo.location}
-        onChange={(e) => handleFieldChange("location", e.target.value)}
-      />
+      <form>
+        <label htmlFor="name">Full Name</label>
+        <input
+          type="text"
+          placeholder="Full Name"
+          onChange={handleFieldChange}
+          name="name"
+          value={personalInfo.name}
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          type="text"
+          placeholder="Email"
+          onChange={handleFieldChange}
+          name="email"
+          value={personalInfo.email}
+        />
+        <label htmlFor="phoneNumber">Phone Number</label>
+        <input
+          type="text"
+          placeholder="Phone Number"
+          onChange={handleFieldChange}
+          name="phoneNumber"
+          value={personalInfo.phoneNumber}
+        />
+        <label htmlFor="location">Location</label>
+        <input
+          type="text"
+          placeholder="City, Country"
+          onChange={handleFieldChange}
+          name="location"
+          value={personalInfo.location}
+        />
+      </form>
       <Button
+        text="Clear"
+        backgroundColor="grey"
         textColor="white"
-        backgroundColor="blue"
-        text="Save"
-        onClick={() => null}
-      />
-      <Button
-        textColor="black"
-        backgroundColor=""
-        text="Reset"
         onClick={() => null}
       />
     </>

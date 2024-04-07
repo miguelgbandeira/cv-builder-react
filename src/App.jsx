@@ -1,4 +1,5 @@
 import "./App.css";
+import uniqid from "uniqid";
 import EducationForm from "./components/EducationForm.jsx";
 import Header from "./components/Header.jsx";
 import PersonalInformationForm from "./components/PersonalInformationForm.jsx";
@@ -6,16 +7,51 @@ import Resume from "./components/Resume.jsx";
 import WorkExperienceForm from "./components/WorkExperienceForm.jsx";
 import { useState } from "react";
 
-function App() {
+export default function App() {
   const [personalInfo, setPersonalInfo] = useState({
-    name: "Full Name",
-    email: "email@email.com",
-    phoneNumber: "+1111111111",
-    location: "City, Country",
+    name: "",
+    email: "",
+    phoneNumber: "",
+    location: "",
   });
 
-  function handleFieldChange(fieldName, value) {
-    setPersonalInfo({ ...personalInfo, [fieldName]: value });
+  const [educationArray, setEducationArray] = useState([]);
+  const [currentEducation, setCurrEducation] = useState({
+    degree: "",
+    school: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    grade: "",
+    id: uniqid(),
+  });
+
+  function handlePersonalInfoChange(event) {
+    const { name, value } = event.target;
+    setPersonalInfo((prevState) => {
+      return { ...prevState, [name]: value };
+    });
+  }
+
+  function handleEducationChange(event) {
+    const { name, value } = event.target;
+    setCurrEducation((prevState) => {
+      return { ...prevState, [name]: value };
+    });
+  }
+
+  function handleAddEducation(event) {
+    event.preventDefault();
+    setEducationArray([...educationArray, currentEducation]);
+    setCurrEducation({
+      degree: "",
+      school: "",
+      location: "",
+      startDate: "",
+      endDate: "",
+      grade: "",
+      id: uniqid(),
+    });
   }
 
   return (
@@ -25,17 +61,19 @@ function App() {
         <div className="form">
           <PersonalInformationForm
             personalInfo={personalInfo}
-            handleFieldChange={handleFieldChange}
+            handleFieldChange={handlePersonalInfoChange}
           />
-          <EducationForm />
+          <EducationForm
+            handleFieldChange={handleEducationChange}
+            education={currentEducation}
+            handleAddEducation={handleAddEducation}
+          />
           <WorkExperienceForm />
         </div>
         <div className="cv-container">
-          <Resume personalInfo={personalInfo} />
+          <Resume personalInfo={personalInfo} educationArray={educationArray} />
         </div>
       </div>
     </div>
   );
 }
-
-export default App;
