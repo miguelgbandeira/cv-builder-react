@@ -42,9 +42,9 @@ export default function PersonalInformationForm({
         />
       </form>
       <Button
-        text="Clear"
-        backgroundColor="grey"
-        textColor="white"
+        textColor="black"
+        backgroundColor=""
+        text="Reset"
         onClick={() => null}
       />
     </>

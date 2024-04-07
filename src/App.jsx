@@ -14,7 +14,6 @@ export default function App() {
     phoneNumber: "",
     location: "",
   });
-
   const [educationArray, setEducationArray] = useState([]);
   const [currentEducation, setCurrEducation] = useState({
     degree: "",
@@ -23,6 +22,16 @@ export default function App() {
     startDate: "",
     endDate: "",
     grade: "",
+    id: uniqid(),
+  });
+  const [workExperienceArray, setWorkExperienceArray] = useState([]);
+  const [currentWork, setCurrWork] = useState({
+    position: "",
+    company: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    description: "",
     id: uniqid(),
   });
 
@@ -54,6 +63,27 @@ export default function App() {
     });
   }
 
+  function handleWorkExperienceChange(event) {
+    const { name, value } = event.target;
+    setCurrWork((prevState) => {
+      return { ...prevState, [name]: value };
+    });
+  }
+
+  function handleAddWorkExperience(event) {
+    event.preventDefault();
+    setWorkExperienceArray([...workExperienceArray, currentWork]);
+    setCurrWork({
+      position: "",
+      company: "",
+      location: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      id: uniqid(),
+    });
+  }
+
   return (
     <div className="app">
       <Header />
@@ -68,10 +98,18 @@ export default function App() {
             education={currentEducation}
             handleAddEducation={handleAddEducation}
           />
-          <WorkExperienceForm />
+          <WorkExperienceForm
+            handleFieldChange={handleWorkExperienceChange}
+            work={currentWork}
+            handleAddWorkExperience={handleAddWorkExperience}
+          />
         </div>
         <div className="cv-container">
-          <Resume personalInfo={personalInfo} educationArray={educationArray} />
+          <Resume
+            personalInfo={personalInfo}
+            educationArray={educationArray}
+            workArray={workExperienceArray}
+          />
         </div>
       </div>
     </div>

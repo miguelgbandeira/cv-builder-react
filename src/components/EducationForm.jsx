@@ -58,9 +58,9 @@ export default function EducationForm({
           value={education.grade}
         />
         <Button
-          text="Clear"
-          backgroundColor="grey"
-          textColor="white"
+          textColor="black"
+          backgroundColor=""
+          text="Reset"
           onClick={() => null}
         />
         <Button
