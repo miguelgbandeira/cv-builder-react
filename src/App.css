@@ -72,3 +72,24 @@ form {
   border-bottom: 1px solid #242424;
   color: #242424;
 }
+
+@media only screen and (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .cv-container {
+    grid-column: 1;
+    width: auto;
+    height: auto;
+    margin: 0 auto; /* Center horizontally */
+    justify-self: center; /* Center horizontally */
+    align-self: center; /* Center vertically */
+  }
+
+  .form {
+    grid-column: 1;
+    margin-top: 2em;
+  }
+}
