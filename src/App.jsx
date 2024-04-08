@@ -86,32 +86,30 @@ export default function App() {
 
   return (
     <div className="app">
-      <Header />
-      <div className="builder-container">
-        <div className="form">
-          <PersonalInformationForm
-            personalInfo={personalInfo}
-            handleFieldChange={handlePersonalInfoChange}
-          />
-          <EducationForm
-            handleFieldChange={handleEducationChange}
-            education={currentEducation}
-            handleAddEducation={handleAddEducation}
-            educationArray={educationArray}
-          />
-          <WorkExperienceForm
-            handleFieldChange={handleWorkExperienceChange}
-            work={currentWork}
-            handleAddWorkExperience={handleAddWorkExperience}
-          />
-        </div>
-        <div className="cv-container">
-          <Resume
-            personalInfo={personalInfo}
-            educationArray={educationArray}
-            workArray={workExperienceArray}
-          />
-        </div>
+      <Header className="header" />
+      <div className="form">
+        <PersonalInformationForm
+          personalInfo={personalInfo}
+          handleFieldChange={handlePersonalInfoChange}
+        />
+        <EducationForm
+          handleFieldChange={handleEducationChange}
+          education={currentEducation}
+          handleAddEducation={handleAddEducation}
+          educationArray={educationArray}
+        />
+        <WorkExperienceForm
+          handleFieldChange={handleWorkExperienceChange}
+          work={currentWork}
+          handleAddWorkExperience={handleAddWorkExperience}
+        />
+      </div>
+      <div className="cv-container">
+        <Resume
+          personalInfo={personalInfo}
+          educationArray={educationArray}
+          workArray={workExperienceArray}
+        />
       </div>
     </div>
   );

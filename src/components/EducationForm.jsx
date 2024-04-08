@@ -7,7 +7,7 @@ export default function EducationForm({
   handleAddEducation,
 }) {
   return (
-    <>
+    <div className="form-container">
       <h2>Education</h2>
       <div>
         {educationArray.map((education) => {
@@ -74,19 +74,21 @@ export default function EducationForm({
           name="grade"
           value={education.grade}
         />
-        <Button
-          textColor="black"
-          backgroundColor=""
-          text="Reset"
-          onClick={() => null}
-        />
-        <Button
-          text="Save"
-          backgroundColor="blue"
-          textColor="white"
-          onClick={handleAddEducation}
-        />
+        <div className="buttons-container">
+          <Button
+            textColor="black"
+            backgroundColor=""
+            text="Reset"
+            onClick={() => null}
+          />
+          <Button
+            text="Save"
+            backgroundColor="blue"
+            textColor="white"
+            onClick={handleAddEducation}
+          />
+        </div>
       </form>
-    </>
+    </div>
   );
 }

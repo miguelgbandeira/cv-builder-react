@@ -1,13 +1,14 @@
 import Button from "./Button.jsx";
+import "../styles/PersonalInformationForm.css";
 
 export default function PersonalInformationForm({
   personalInfo,
   handleFieldChange,
 }) {
   return (
-    <>
-      <h2>Personal Information</h2>
-      <form>
+    <div className="personal-info form-container">
+      <h2 className="personal-header">Personal Information</h2>
+      <form className="personal-form-container">
         <label htmlFor="name">Full Name</label>
         <input
           type="text"
@@ -47,6 +48,6 @@ export default function PersonalInformationForm({
         text="Reset"
         onClick={() => null}
       />
-    </>
+    </div>
   );
 }

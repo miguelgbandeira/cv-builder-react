@@ -1,0 +1,8 @@
+.personal-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-header {
+  margin-bottom: 0.6em;
+}

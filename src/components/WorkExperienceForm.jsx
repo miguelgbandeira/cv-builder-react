@@ -6,7 +6,7 @@ export default function WorkExperienceForm({
   handleAddWorkExperience,
 }) {
   return (
-    <>
+    <div className="form-container">
       <h2>Work Experience</h2>
       <form>
         <label htmlFor="position">Position</label>
@@ -57,19 +57,21 @@ export default function WorkExperienceForm({
           name="description"
           value={work.description}
         />
-        <Button
-          textColor="black"
-          backgroundColor=""
-          text="Reset"
-          onClick={() => null}
-        />
-        <Button
-          textColor="white"
-          backgroundColor="blue"
-          text="Save"
-          onClick={handleAddWorkExperience}
-        />
+        <div className="buttons-container">
+          <Button
+            textColor="black"
+            backgroundColor=""
+            text="Reset"
+            onClick={() => null}
+          />
+          <Button
+            textColor="white"
+            backgroundColor="blue"
+            text="Save"
+            onClick={handleAddWorkExperience}
+          />
+        </div>
       </form>
-    </>
+    </div>
   );
 }
