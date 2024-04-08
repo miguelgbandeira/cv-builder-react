@@ -1,4 +1,5 @@
 import Button from "./Button.jsx";
+import "../styles/EducationForm.css";
 
 export default function EducationForm({
   education,
@@ -12,9 +13,11 @@ export default function EducationForm({
       <div>
         {educationArray.map((education) => {
           return (
-            <div className="prevEducation" key={education.id}>
-              <p>Degree: {education.degree}</p>
-              <p>School: {education.school}</p>
+            <div className="prev-education" key={education.id}>
+              <p>
+                {education.degree}, {education.school}
+              </p>
+
               <Button
                 textColor="black"
                 backgroundColor=""
