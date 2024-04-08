@@ -6,14 +6,15 @@ export default function EducationForm({
   educationArray,
   handleFieldChange,
   handleAddEducation,
+  handleOnDelete,
 }) {
   return (
     <div className="form-container">
-      <h2>Education</h2>
+      <h2 className="form-header">Education</h2>
       <div>
         {educationArray.map((education) => {
           return (
-            <div className="prev-education" key={education.id}>
+            <div className="prev" key={education.id}>
               <p>
                 {education.degree}, {education.school}
               </p>
@@ -22,7 +23,7 @@ export default function EducationForm({
                 textColor="black"
                 backgroundColor=""
                 text="Delete"
-                onClick={() => null}
+                onClick={() => handleOnDelete(work.id)}
               />
             </div>
           );

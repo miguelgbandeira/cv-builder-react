@@ -47,8 +47,19 @@ form {
   border-radius: 15px;
 }
 
+.form-header {
+  margin-bottom: 0.6em;
+}
+
 .buttons-container {
   display: flex;
   justify-content: center;
   gap: 1em;
+}
+
+.prev {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }

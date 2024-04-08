@@ -2,12 +2,31 @@ import Button from "./Button.jsx";
 
 export default function WorkExperienceForm({
   work,
+  workArray,
   handleFieldChange,
   handleAddWorkExperience,
+  handleOnDelete,
 }) {
   return (
     <div className="form-container">
-      <h2>Work Experience</h2>
+      <h2 className="form-header">Work Experience</h2>
+      <div>
+        {workArray.map((work) => {
+          return (
+            <div className="prev" key={work.id}>
+              <p>
+                {work.position}, {work.company}
+              </p>
+              <Button
+                textColor="black"
+                backgroundColor=""
+                text="Delete"
+                onClick={() => handleOnDelete(work.id)}
+              />
+            </div>
+          );
+        })}
+      </div>
       <form>
         <label htmlFor="position">Position</label>
         <input

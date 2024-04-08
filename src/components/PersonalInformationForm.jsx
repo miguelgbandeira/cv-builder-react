@@ -7,7 +7,7 @@ export default function PersonalInformationForm({
 }) {
   return (
     <div className="personal-info form-container">
-      <h2 className="personal-header">Personal Information</h2>
+      <h2 className="form-header">Personal Information</h2>
       <form className="personal-form-container">
         <label htmlFor="name">Full Name</label>
         <input

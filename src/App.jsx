@@ -84,6 +84,20 @@ export default function App() {
     });
   }
 
+  function handleOnDeleteEducation(id) {
+    const arrayWithElementDelete = educationArray.filter(
+      (education) => education.id !== id
+    );
+    setEducationArray(arrayWithElementDelete);
+  }
+
+  function handleOnDeleteWork(id) {
+    const arrayWithElementDelete = workExperienceArray.filter(
+      (work) => work.id !== id
+    );
+    setWorkExperienceArray(arrayWithElementDelete);
+  }
+
   return (
     <div className="app">
       <Header className="header" />
@@ -97,11 +111,14 @@ export default function App() {
           education={currentEducation}
           handleAddEducation={handleAddEducation}
           educationArray={educationArray}
+          handleOnDelete={handleOnDeleteEducation}
         />
         <WorkExperienceForm
           handleFieldChange={handleWorkExperienceChange}
           work={currentWork}
+          workArray={workExperienceArray}
           handleAddWorkExperience={handleAddWorkExperience}
+          handleOnDelete={handleOnDeleteWork}
         />
       </div>
       <div className="cv-container">
