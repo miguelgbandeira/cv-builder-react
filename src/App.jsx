@@ -6,6 +6,8 @@ import PersonalInformationForm from "./components/PersonalInformationForm.jsx";
 import Resume from "./components/Resume.jsx";
 import WorkExperienceForm from "./components/WorkExperienceForm.jsx";
 import { useState } from "react";
+import { IonIcon } from "@ionic/react";
+import { logoGithub } from "ionicons/icons";
 
 export default function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -132,6 +134,15 @@ export default function App() {
           educationArray={educationArray}
           workArray={workExperienceArray}
         />
+      </div>
+      <div className="footer">
+        Copyright © 2024 miguelgbandeira
+        <a
+          href="https://github.com/miguelgbandeira/cv-builder-react"
+          target="_blank"
+        >
+          <IonIcon icon={logoGithub} id="github-icon" />
+        </a>
       </div>
     </div>
   );
