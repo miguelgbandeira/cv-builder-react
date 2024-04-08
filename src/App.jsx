@@ -97,6 +97,7 @@ export default function App() {
             handleFieldChange={handleEducationChange}
             education={currentEducation}
             handleAddEducation={handleAddEducation}
+            educationArray={educationArray}
           />
           <WorkExperienceForm
             handleFieldChange={handleWorkExperienceChange}
