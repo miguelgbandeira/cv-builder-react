@@ -1,17 +1,21 @@
 export default function CVWorkSection({ workArray }) {
   return (
-    <div className="cv-education-container">
-      <h2>Work Experience</h2>
+    <div className="cv-work-container">
+      <h2 className="section-header">WORK EXPERIENCE</h2>
       <div>
         {workArray.map((work) => {
           return (
             <div key={work.id}>
-              <p>Position: {work.position}</p>
-              <p>Company: {work.company}</p>
-              <p>Location: {work.location}</p>
-              <p>Start date: {work.startDate}</p>
-              <p>End date: {work.endDate}</p>
-              <p>Description: {work.description}</p>
+              <h4>
+                {work.position}, {work.company}
+              </h4>
+              <p>{work.location}</p>
+              <p>
+                {work.startDate} - {work.endDate}
+              </p>
+              <p>
+                <pre>{work.description}</pre>
+              </p>
             </div>
           );
         })}

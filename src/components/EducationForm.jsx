@@ -23,28 +23,30 @@ export default function EducationForm({
                 textColor="black"
                 backgroundColor=""
                 text="Delete"
-                onClick={() => handleOnDelete(work.id)}
+                onClick={() => handleOnDelete(education.id)}
               />
             </div>
           );
         })}
       </div>
       <form>
-        <label htmlFor="name">Degree Name</label>
+        <label htmlFor="name">Degree Name*</label>
         <input
           type="text"
           placeholder="Bachelor of..."
           onChange={handleFieldChange}
           name="degree"
           value={education.degree}
+          required
         />
-        <label htmlFor="school">School</label>
+        <label htmlFor="school">School*</label>
         <input
           type="text"
           placeholder="University of..."
           onChange={handleFieldChange}
           name="school"
           value={education.school}
+          required
         />
         <label htmlFor="location">Location</label>
         <input
@@ -54,21 +56,23 @@ export default function EducationForm({
           name="location"
           value={education.location}
         />
-        <label htmlFor="startDate">Start Date</label>
+        <label htmlFor="startDate">Start Date*</label>
         <input
           type="text"
           placeholder="dd/mm/yy"
           onChange={handleFieldChange}
           name="startDate"
           value={education.startDate}
+          required
         />
-        <label htmlFor="endDate">End Date</label>
+        <label htmlFor="endDate">End Date*</label>
         <input
           type="text"
           placeholder="dd/mm/yy."
           onChange={handleFieldChange}
           name="endDate"
           value={education.endDate}
+          required
         />
         <label htmlFor="grade">Grade</label>
         <input
@@ -79,12 +83,6 @@ export default function EducationForm({
           value={education.grade}
         />
         <div className="buttons-container">
-          <Button
-            textColor="black"
-            backgroundColor=""
-            text="Reset"
-            onClick={() => null}
-          />
           <Button
             text="Save"
             backgroundColor="blue"

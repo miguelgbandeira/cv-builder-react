@@ -66,6 +66,11 @@ export default function App() {
   function handleWorkExperienceChange(event) {
     const { name, value } = event.target;
     setCurrWork((prevState) => {
+      if (name === "description") {
+        const lines = value.split("\n");
+        const newValue = lines.join("\n");
+        return { ...prevState, [name]: newValue };
+      }
       return { ...prevState, [name]: value };
     });
   }

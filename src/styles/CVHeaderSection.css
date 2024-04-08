@@ -1,6 +1,5 @@
 .cv-header-container {
-  background-color: blue;
-  color: whitesmoke;
+  background-color: lightgray;
   text-align: center;
 }
 
@@ -12,4 +11,5 @@
 
 .header-name {
   padding: 0.5em 0;
+  color: #242424;
 }

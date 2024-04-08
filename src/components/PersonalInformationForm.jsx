@@ -42,12 +42,6 @@ export default function PersonalInformationForm({
           value={personalInfo.location}
         />
       </form>
-      <Button
-        textColor="black"
-        backgroundColor=""
-        text="Reset"
-        onClick={() => null}
-      />
     </div>
   );
 }
