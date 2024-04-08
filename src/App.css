@@ -91,6 +91,12 @@ form {
   vertical-align: middle;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .app {
     grid-template-columns: 1fr;
