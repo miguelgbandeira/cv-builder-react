@@ -1,8 +1,25 @@
-# React + Vite
+# CV Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This CV Builder app is a straightforward project for learning React and how to manage and use state.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view a live demo of the Library App [here.](https://cv-builder-react.pages.dev/)
+
+## Features
+
+- **Generate CV from User Input**: Allow users to input their personal information, education history, and work experience. Then, use this data to automatically generate a CV (Curriculum Vitae)
+
+## Technologies Used
+
+- React
+- CSS
+- Cloufare (to deploy the app)
+
+## How to Use
+
+- Clone or download the repository to your local machine.
+- Have node installed on your machine.
+- Run ```npm install```
+- Run ```npm run dev```
+- Open ```http://localhost:5173/``` in your browser.
