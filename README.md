@@ -1,5 +1,9 @@
 # CV Builder
 
+[![CV Builder screenshot](images/screenshot.png)](https://cv-builder-react.pages.dev/)
+
+## About this app
+
 This CV Builder app is a straightforward project for learning React and how to manage and use state.
 
 ## Demo
