@@ -8,7 +8,7 @@ This CV Builder app is a straightforward project for learning React and how to m
 
 ## Demo
 
-You can view a live demo of the Library App [here.](https://cv-builder-react.pages.dev/)
+You can view a live demo of the app [here.](https://cv-builder-react.pages.dev/)
 
 ## Features
 
